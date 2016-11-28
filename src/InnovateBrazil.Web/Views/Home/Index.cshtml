@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - InnovateBrazil.Web</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    @*<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>*@
 
     <link rel="stylesheet" href="~/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/magnific-popup.css" />
-    <link rel="stylesheet" href="~/css/creative.min.css" />
+    <link rel="stylesheet" href="~/css/creative.css" />
 </head>
 <body id="page-top">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -26,16 +26,16 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Innovate Brazil</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Sobre</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">O Processo</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -52,10 +52,12 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">Your Favorite Source of Free Bootstrap Themes</h1>
+                <h1 id="homeHeading">
+                    <img src="~/images/ib-logo.png" class="img-responsive" /> 
+                </h1>
                 <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <p>Participe da maior preparação para a Imagine Cup que o Rio Grande do Norte já viu!</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Descubra!</a>
             </div>
         </div>
     </header>
@@ -63,10 +65,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
+                    <h2 class="section-heading">O que é o Innovate Brazil?</h2>
+                    <p class="text-faded">
+                        O Innovate Brazil é uma competição com foco na preparaçao de projetos regionais para participação na Imagine Cup.
+                        Com foco em captar projetos, levá-los para a nuvem e deixá-los preparados para a maior competição de tecnologia do mundo,
+                        o Innovate Brazil atuará com diversos grupos de estudantes no Rio Grande do Norte entre Dezembro/2016 e Março/2017 para
+                        preparar seus projetos e transformá-los nos melhores, seguindo sempre os moldes da competição maior.
+                    </p>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+                    <h2 class="section-heading">Qual a finalidade do Innovate Brasil?</h2>
+                    <p class="text-faded">
+                        O Innovate Brazil busca preparar os projetos do estado para terem maiores chances de vitória na Imagine Cup.
+                        Não é obrigatória a participação no Innovate para participar da Imagine Cup, mas buscamos sempre captar projetos
+                        para deixá-los de acordo com o molde da competição mundial.
+                    </p>
+                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Como será o processo?</a>
                 </div>
             </div>
         </div>
@@ -75,7 +88,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading">O processo do Innovate Brazil</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -85,29 +98,31 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                        <h3>Inscreva seu Projeto no Innovate</h3>
+                        <p class="text-muted">As inscrições ficarão disponíveis entre <strong>09/12/2016</strong> e <strong>04/03/2017</strong></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                        <h3>Prepare a Documentação</h3>
+                        <p class="text-muted">A documentação de explicação do seu projeto deve ser enviada
+                        no mesmo período das inscrições</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+                        <h3>Participe dos Eventos de Fomento</h3>
+                        <p class="text-muted">Dojos e Hackathons serão as ferramentas utilizadas para preparar seu projeto
+                        para a grande competição.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+                        <h3>Apresente seu Projeto na Grande Final</h3>
+                        <p class="text-muted">A grande final do Innovate será em março/2017 e contará com a participação dos melhores projetos.</p>
                     </div>
                 </div>
             </div>
