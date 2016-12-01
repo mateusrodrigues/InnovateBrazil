@@ -1,6 +1,6 @@
 ﻿@{
+    // No default layout for the first page
     Layout = null;
-    ViewData["Title"] = "Home Page";
 }
 
 <!DOCTYPE html>
@@ -8,15 +8,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - InnovateBrazil.Web</title>
-
-    @*<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>*@
+    <title>Innovate Brazil</title>
 
     <link rel="stylesheet" href="~/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/magnific-popup.css" />
     <link rel="stylesheet" href="~/css/creative.css" />
+
+    @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
 </head>
 <body id="page-top">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -35,13 +34,13 @@
                         <a class="page-scroll" href="#about">Sobre</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">O Processo</a>
+                        <a class="page-scroll" href="#process">O Processo</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#history">História</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +55,8 @@
                     <img src="~/images/ib-logo.png" class="img-responsive" /> 
                 </h1>
                 <hr>
-                <p>Participe da maior preparação para a Imagine Cup que o Rio Grande do Norte já viu!</p>
+                <h3>Participe da maior preparação para a Imagine Cup que o Rio Grande do Norte já viu!</h3>
+                <br />
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Descubra!</a>
             </div>
         </div>
@@ -64,27 +64,42 @@
     <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">O que é o Innovate Brazil?</h2>
-                    <p class="text-faded">
-                        O Innovate Brazil é uma competição com foco na preparaçao de projetos regionais para participação na Imagine Cup.
-                        Com foco em captar projetos, levá-los para a nuvem e deixá-los preparados para a maior competição de tecnologia do mundo,
-                        o Innovate Brazil atuará com diversos grupos de estudantes no Rio Grande do Norte entre Dezembro/2016 e Março/2017 para
-                        preparar seus projetos e transformá-los nos melhores, seguindo sempre os moldes da competição maior.
-                    </p>
+                <div class="col-lg-4 text-center">
+                    <h2 class="section-heading">O que é?</h2>
                     <hr class="light">
-                    <h2 class="section-heading">Qual a finalidade do Innovate Brasil?</h2>
                     <p class="text-faded">
-                        O Innovate Brazil busca preparar os projetos do estado para terem maiores chances de vitória na Imagine Cup.
-                        Não é obrigatória a participação no Innovate para participar da Imagine Cup, mas buscamos sempre captar projetos
-                        para deixá-los de acordo com o molde da competição mundial.
+                        O Innovate Brazil é uma competição com foco na preparação de projetos regionais para participação na Imagine Cup.
+                        Buscamos passar para os participantes o "caminho das pedras", para que possam competir preparados e com boas
+                        chances de continuação na disputa.
                     </p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Como será o processo?</a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <h2 class="section-heading">Por que?</h2>
+                    <hr class="light">
+                    <p class="text-faded">
+                        O Rio Grande do Norte, atualmente, não possui projetos que conseguiram superar a linha de corte da competição
+                        e disputar uma vaga na final nacional ou, muito menos, internacional da Imagine Cup. Buscamos mudar esse cenário,
+                        dando oportunidade aos projetos de estarem preparados para a grande competição.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <h2 class="section-heading">É obrigatório?</h2>
+                    <hr class="light">
+                    <p class="text-faded">
+                        Não. O Innovate Brazil é apenas uma etapa extra de preparação promovida pelos Microsoft Student Partners da região
+                        de Natal, Rio Grande do Norte. Uma equipe pode, se desejar, entrar direto na Imagine Cup, assim como a participação
+                        no Innovate não garante uma vaga na final da Imagine Cup, mas aumentam suas chances! :)
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="#process" class="page-scroll btn btn-default btn-xl sr-button">Como será o processo?</a>
                 </div>
             </div>
         </div>
     </section>
-    <section id="services">
+    <section id="process">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -97,129 +112,64 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-pencil text-primary sr-icons"></i>
                         <h3>Inscreva seu Projeto no Innovate</h3>
-                        <p class="text-muted">As inscrições ficarão disponíveis entre <strong>09/12/2016</strong> e <strong>04/03/2017</strong></p>
+                        <p class="text-muted">
+                            As inscrições ficarão abertas entre <strong>09/12/2016</strong> e <strong>04/03/2017</strong>.
+                            Consulte o regulamento <a href="https://innovatev2storage.blob.core.windows.net/documents/Regulamento%20Oficial%20-%20Innovate%20Brasil%202017.pdf" target="_blank">aqui</a>.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-file-text-o text-primary sr-icons"></i>
                         <h3>Prepare a Documentação</h3>
-                        <p class="text-muted">A documentação de explicação do seu projeto deve ser enviada
-                        no mesmo período das inscrições</p>
+                        <p class="text-muted">
+                            A documentação descreve as partes principais do seu projeto. Deve ser enviado após a realização das inscrições.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-calendar text-primary sr-icons"></i>
                         <h3>Participe dos Eventos de Fomento</h3>
-                        <p class="text-muted">Dojos e Hackathons serão as ferramentas utilizadas para preparar seu projeto
-                        para a grande competição.</p>
+                        <p class="text-muted">
+                            Dojos e Hackathons serão as principais ferramentas utilizadas pela nossa equipe para preparar seu projeto para a grande competição.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                        <i class="fa fa-4x fa-slideshare text-primary sr-icons"></i>
                         <h3>Apresente seu Projeto na Grande Final</h3>
-                        <p class="text-muted">A grande final do Innovate será em março/2017 e contará com a participação dos melhores projetos.</p>
+                        <p class="text-muted">
+                            A grande final do Innovate será em março/2017 e contará com a participação dos melhores projetos em um momento de pitching
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="no-padding" id="portfolio">
+    <section class="no-padding" id="history">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-4 col-sm-6">
-                    <a href="~/images/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="~/images/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <img src="~/images/ic/ic02.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="~/images/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="~/images/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <img src="~/images/ic/ic03.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="~/images/portfolio/fullsize/3.jpg" class="portfolio-box">
-                        <img src="~/images/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <img src="~/images/ic/ic04.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="~/images/portfolio/fullsize/4.jpg" class="portfolio-box">
-                        <img src="~/images/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <img src="~/images/ic/ic05.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="~/images/portfolio/fullsize/5.jpg" class="portfolio-box">
-                        <img src="~/images/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <img src="~/images/ic/ic06.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="~/images/portfolio/fullsize/6.jpg" class="portfolio-box">
-                        <img src="~/images/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <img src="~/images/ic/ic07.jpg" class="img-responsive" alt="">
                 </div>
             </div>
         </div>
@@ -227,8 +177,7 @@
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
+                <h2>Faça parte da história!</h2>
             </div>
         </div>
     </aside>
@@ -236,17 +185,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading">Fala com a gente!</h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p>Está com alguma dúvida? Não hesite em entrar em contato conosco!</p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                <div class="col-lg-4 col-lg-offset-4 text-center">
+                    <p><a href="http://fb.com/ctmsrn" target="_blank"><i class="fa fa-facebook-official fa-3x sr-contact"></i></a></p>
                 </div>
             </div>
         </div>
