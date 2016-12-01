@@ -54,6 +54,14 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+/* About section adjustments */
+#about p {
+    color: #562583;
+}
+
+#about h2 {
+    color: #562583;
+}
 .bg-primary {
   background-color: #C9DA2D;
 }
@@ -362,9 +370,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-  color: white;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  color: #562583;
+  background-color: #C9DA2D;
+  border-color: #C9DA2D;
 }
 .btn-primary:active,
 .btn-primary.active,
